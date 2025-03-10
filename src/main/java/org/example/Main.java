@@ -1,18 +1,18 @@
 package org.example;
-
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Doğum yılınızı giriniz: ");
+        //Kullanıcıdan doğum yılını alan kod bloğu
+        System.out.print("Doğum yılınızı giriniz: ");
         int year = scanner.nextInt();
 
+        //Çin zodyağında hangi burca ait olduğunu bulmak için 12 ye bölümünden kalanı hesaplayan kod bloğu
         int mod = year % 12;
 
+        //switch kullanarak hangi burca ait olduğunu bulan kod bloğu
        String zodyak = switch (mod) {
            case 0 -> "Maymun";
            case 1 -> "Horoz";
@@ -29,6 +29,7 @@ public class Main {
            default -> "Geçersiz";
        };
 
+        //Burcu yazdıran kod
         System.out.println("Çin Zodyağı Burcunuz: " + zodyak);
 
     }
